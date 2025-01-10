@@ -6,7 +6,7 @@ module "sandbox" {
     AccountName               = "global-hub"
     ManagedOrganizationalUnit = "CT_Infrastructure/CT_GlobalHub"
     SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
-    SSOUserFirstName          = "GlobalHub"
+    SSOUserFirstName          = "GlobalHub1"
     SSOUserLastName           = "AFT"
   }
 
