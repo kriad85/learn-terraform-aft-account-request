@@ -2,11 +2,11 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "skariria+equans-lz-aft-global-hub@amazon.fr"
-    AccountName               = "global-hub"
-    ManagedOrganizationalUnit = "toto"
+    AccountEmail              = "skariria+equans-lz-aft-edge-spoke@amazon.fr"
+    AccountName               = "edge-spoke"
+    ManagedOrganizationalUnit = "CT_Spoke"
     SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
-    SSOUserFirstName          = "GlobalHub"
+    SSOUserFirstName          = "EdgeSpoke"
     SSOUserLastName           = "AFT"
   }
 
@@ -23,5 +23,5 @@ module "sandbox" {
     group = "non-prod"
   }
 
-  account_customizations_name = "global-hub"
+  account_customizations_name = "edge-spoke"
 }
