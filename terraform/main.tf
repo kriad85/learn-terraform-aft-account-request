@@ -4,9 +4,9 @@ module "sandbox" {
   control_tower_parameters = {
     AccountEmail              = "skariria+equans-lz-aft-global-hub@amazon.fr"
     AccountName               = "global-hub"
-    ManagedOrganizationalUnit = "CT_Infrastructure/CT_GlobalHub"
+    ManagedOrganizationalUnit = "CT_GlobalHub"
     SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
-    SSOUserFirstName          = "GlobalHub1"
+    SSOUserFirstName          = "GlobalHub"
     SSOUserLastName           = "AFT"
   }
 
