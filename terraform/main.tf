@@ -6,7 +6,7 @@ module "global-hub" {
     AccountName               = "global-hub"
     ManagedOrganizationalUnit = "CT_Infrastructure"
     SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
-    SSOUserFirstName          = "ApplicationSpoke"
+    SSOUserFirstName          = "GlobalHub"
     SSOUserLastName           = "AFT"
   }
 
@@ -24,6 +24,34 @@ module "global-hub" {
   }
 
   account_customizations_name = "global-hub"
+}
+
+module "edge-hub" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "skariria+equans-lz-aft-edge-hub@amazon.fr"
+    AccountName               = "edge-hub"
+    ManagedOrganizationalUnit = "CT_Infrastructure"
+    SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
+    SSOUserFirstName          = "EdgeHub"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "edge-hub"
 }
 
 module "application-spoke" {
