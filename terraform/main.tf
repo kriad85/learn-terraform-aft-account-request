@@ -26,12 +26,12 @@ module "global-hub" {
   account_customizations_name = "global-hub"
 }
 
-module "edge-hub" {
+module "edge-hub1" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "skariria+equans-lz-aft-edge-hub@amazon.fr"
-    AccountName               = "edge-hub"
+    AccountEmail              = "skariria+equans-lz-aft-edge-hub1@amazon.fr"
+    AccountName               = "edge-hub1"
     ManagedOrganizationalUnit = "CT_Infrastructure"
     SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
     SSOUserFirstName          = "EdgeHub"
@@ -51,7 +51,7 @@ module "edge-hub" {
     group = "non-prod"
   }
 
-  account_customizations_name = "edge-hub"
+  account_customizations_name = "edge-hub1"
 }
 
 module "application-spoke" {
