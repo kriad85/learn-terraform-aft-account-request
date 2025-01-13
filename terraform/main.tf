@@ -54,12 +54,12 @@ module "application-spoke" {
   account_customizations_name = "application-spoke"
 }
 
-module "sandbox4" {
+module "sandbox5" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "skariria+equans-lz-aft-sandbox4@amazon.fr"
-    AccountName               = "sandbox4"
+    AccountEmail              = "skariria+equans-lz-aft-sandbox5@amazon.fr"
+    AccountName               = "sandbox5"
     ManagedOrganizationalUnit = "Sandbox"
     SSOUserEmail              = "skariria+equans-lz-aft@amazon.fr"
     SSOUserFirstName          = "ApplicationSpoke"
@@ -79,5 +79,5 @@ module "sandbox4" {
     group = "non-prod"
   }
 
-  account_customizations_name = "sandbox4"
+  account_customizations_name = "sandbox5"
 }
